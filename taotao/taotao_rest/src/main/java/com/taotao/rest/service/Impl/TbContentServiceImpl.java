@@ -6,7 +6,7 @@ import com.taotao.common.util.JsonUtils;
 import com.taotao.mapper.TbContentMapper;
 import com.taotao.pojo.TbContent;
 import com.taotao.pojo.TbContentExample;
-import com.taotao.rest.service.JedisClient;
+import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.service.TbContentService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

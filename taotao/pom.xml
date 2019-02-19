@@ -13,6 +13,7 @@
         <module>taotao_rest</module>
         <module>taotao_portal</module>
         <module>taotao_search</module>
+        <module>taotao_sso</module>
     </modules>
     <packaging>pom</packaging>
 

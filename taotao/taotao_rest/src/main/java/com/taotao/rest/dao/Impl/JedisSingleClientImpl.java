@@ -1,9 +1,10 @@
-package com.taotao.rest.service.Impl;/**
+package com.taotao.rest.dao.Impl;/**
  * by wyz on 2019/2/11/011.
  */
 
-import com.taotao.rest.service.JedisClient;
+import com.taotao.rest.dao.JedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -17,7 +18,7 @@ import redis.clients.jedis.JedisPool;
  *
  * @create: 2019-02-11 20:32
  **/
-@Service
+@Repository
 public class JedisSingleClientImpl implements JedisClient {
 
     @Autowired
@@ -69,5 +70,12 @@ public class JedisSingleClientImpl implements JedisClient {
         Long hdel = jedis.hdel(hkey, key);
         jedis.close();
         return hdel;
+    }
+
+    @Override
+    public void expire(String key,int seconds) {
+        Jedis jedis = jedisPool.getResource();
+        jedis.expire(key,seconds);
+        jedis.close();
     }
 }

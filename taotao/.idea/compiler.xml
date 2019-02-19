@@ -14,6 +14,7 @@
         <module name="taotao_portal" />
         <module name="taotao_rest" />
         <module name="taotao_search" />
+        <module name="taotao_sso" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
       <module name="taotao_portal" target="1.7" />
       <module name="taotao_rest" target="1.7" />
       <module name="taotao_search" target="1.7" />
+      <module name="taotao_sso" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

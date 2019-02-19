@@ -67,7 +67,6 @@ public class SearchDaoImpl implements SearchDao {
                 itemList.add(item);
             }
             searchResult.setItems(itemList);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

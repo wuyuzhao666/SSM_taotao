@@ -3,7 +3,7 @@ package com.taotao.rest.service.Impl;/**
  */
 
 import com.taotao.common.util.TaotaoResult;
-import com.taotao.rest.service.JedisClient;
+import com.taotao.rest.dao.JedisClient;
 import com.taotao.rest.service.SyncCacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

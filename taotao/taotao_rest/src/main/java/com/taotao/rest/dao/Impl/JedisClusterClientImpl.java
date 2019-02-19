@@ -1,10 +1,9 @@
-package com.taotao.rest.service.Impl;/**
+package com.taotao.rest.dao.Impl;/**
  * by wyz on 2019/2/11/011.
  */
 
-import com.taotao.rest.service.JedisClient;
+import com.taotao.rest.dao.JedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import redis.clients.jedis.JedisCluster;
 
 /**
@@ -51,4 +50,11 @@ public class JedisClusterClientImpl implements JedisClient {
     public Long hdel(String hkey, String key) {
         return jedisCluster.hdel(hkey,key);
     }
+
+    @Override
+    public void expire(String key, int seconds) {
+
+    }
+
+
 }

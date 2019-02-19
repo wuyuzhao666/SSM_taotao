@@ -1,4 +1,4 @@
-package com.taotao.rest.service;
+package com.taotao.rest.dao;
 
 /**
  * by wyz on 2019/2/11/011.
@@ -16,4 +16,5 @@ public interface JedisClient {
 
     Long hdel(String hkey, String key);
 
+    void expire(String key ,int seconds);
 }

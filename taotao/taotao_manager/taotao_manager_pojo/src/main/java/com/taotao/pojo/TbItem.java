@@ -1,133 +1,132 @@
 package com.taotao.pojo;
 
+import java.util.Date;
 
 public class TbItem {
+    private Long id;
 
-  private long id;
-  private String title;
-  private String sellPoint;
-  private long price;
-  private long num;
-  private String barcode;
-  private String image;
-  private long cid;
-  private long status;
-  private java.sql.Timestamp created;
-  private java.sql.Timestamp updated;
+    private String title;
 
+    private String sellPoint;
 
-  public long getId() {
-    return id;
-  }
+    private Long price;
 
-  public void setId(long id) {
-    this.id = id;
-  }
+    private Long num;
 
+    private String barcode;
 
-  public String getTitle() {
-    return title;
-  }
+    private String image;
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
+    private Long cid;
 
+    private Byte status;
 
-  public String getSellPoint() {
-    return sellPoint;
-  }
+    private String created;
 
-  public void setSellPoint(String sellPoint) {
-    this.sellPoint = sellPoint;
-  }
+    private String updated;
 
+    public Long getId() {
+        return id;
+    }
 
-  public long getPrice() {
-    return price;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setPrice(long price) {
-    this.price = price;
-  }
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
+    }
 
-  public long getNum() {
-    return num;
-  }
+    public String getSellPoint() {
+        return sellPoint;
+    }
 
-  public void setNum(long num) {
-    this.num = num;
-  }
+    public void setSellPoint(String sellPoint) {
+        this.sellPoint = sellPoint == null ? null : sellPoint.trim();
+    }
 
+    public Long getPrice() {
+        return price;
+    }
 
-  public String getBarcode() {
-    return barcode;
-  }
+    public void setPrice(Long price) {
+        this.price = price;
+    }
 
-  public void setBarcode(String barcode) {
-    this.barcode = barcode;
-  }
+    public Long getNum() {
+        return num;
+    }
 
+    public void setNum(Long num) {
+        this.num = num;
+    }
 
-  public String getImage() {
-    return image;
-  }
+    public String getBarcode() {
+        return barcode;
+    }
 
-  public void setImage(String image) {
-    this.image = image;
-  }
+    public void setBarcode(String barcode) {
+        this.barcode = barcode == null ? null : barcode.trim();
+    }
 
+    public String getImage() {
+        return image;
+    }
 
-  public long getCid() {
-    return cid;
-  }
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
 
-  public void setCid(long cid) {
-    this.cid = cid;
-  }
+    public Long getCid() {
+        return cid;
+    }
 
+    public void setCid(Long cid) {
+        this.cid = cid;
+    }
 
-  public long getStatus() {
-    return status;
-  }
+    public Byte getStatus() {
+        return status;
+    }
 
-  public void setStatus(long status) {
-    this.status = status;
-  }
+    public void setStatus(Byte status) {
+        this.status = status;
+    }
 
+    public String getCreated() {
+        return created;
+    }
 
-  public java.sql.Timestamp getCreated() {
-    return created;
-  }
+    public void setCreated(String created) {
+        this.created = created;
+    }
 
-  public void setCreated(java.sql.Timestamp created) {
-    this.created = created;
-  }
+    public String getUpdated() {
+        return updated;
+    }
 
+    public void setUpdated(String updated) {
+        this.updated = updated;
+    }
 
-  public java.sql.Timestamp getUpdated() {
-    return updated;
-  }
-
-  public void setUpdated(java.sql.Timestamp updated) {
-    this.updated = updated;
-  }
-
-  @Override
-  public String toString() {
-    return "TbItem{" +
-            "id=" + id +
-            ", title='" + title + '\'' +
-            ", sellPoint='" + sellPoint + '\'' +
-            ", price=" + price +
-            ", num=" + num +
-            ", barcode='" + barcode + '\'' +
-            ", image='" + image + '\'' +
-            ", cid=" + cid +
-            ", status=" + status +
-            ", created=" + created +
-            ", updated=" + updated +
-            '}';
-  }
+    @Override
+    public String toString() {
+        return "TbItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", sellPoint='" + sellPoint + '\'' +
+                ", price=" + price +
+                ", num=" + num +
+                ", barcode='" + barcode + '\'' +
+                ", image='" + image + '\'' +
+                ", cid=" + cid +
+                ", status=" + status +
+                ", created='" + created + '\'' +
+                ", updated='" + updated + '\'' +
+                '}';
+    }
 }

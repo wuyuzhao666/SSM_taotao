@@ -1,16 +1,22 @@
 package com.taotao.mapper;
 
-import com.taotao.common.util.TaotaoResult;
 import com.taotao.pojo.TbItem;
-
+import com.taotao.pojo.TbItemExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TbItemMapper {
-   public TbItem getItemById(long id);
+    long countByExample(TbItemExample example);
 
+    int deleteByExample(TbItemExample example);
 
-   public List getAllItem();
+    int insert(TbItem record);
 
-   public TaotaoResult insert(TbItem tbItem);
+    int insertSelective(TbItem record);
+
+    List<TbItem> selectByExample(TbItemExample example);
+
+    int updateByExampleSelective(@Param("record") TbItem record, @Param("example") TbItemExample example);
+
+    int updateByExample(@Param("record") TbItem record, @Param("example") TbItemExample example);
 }

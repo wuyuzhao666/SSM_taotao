@@ -8,7 +8,7 @@ import com.taotao.pojo.TbItemCat;
 import com.taotao.rest.pojo.CatNode;
 import com.taotao.rest.pojo.Data;
 import com.taotao.rest.service.ItemCatService;
-import com.taotao.rest.service.JedisClient;
+import com.taotao.rest.dao.JedisClient;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -43,6 +43,7 @@ public class ItemCatServiceImpl implements ItemCatService {
 
         try{
             String hget = jedisClient.hget(INDEX_CONTENT_REDIS_KEY, 90 + "");
+            System.out.println(hget);
             if(!StringUtils.isBlank(hget)){
                 Data data = JsonUtils.jsonToPojo(hget, Data.class);
                 return data;
