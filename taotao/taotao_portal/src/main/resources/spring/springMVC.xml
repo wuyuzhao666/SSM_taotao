@@ -11,11 +11,17 @@
 
     <context:component-scan base-package="com.taotao.portal.controller"/>
     <!--<context:component-scan base-package="com.taotao.service"/>-->
-
+    <context:property-placeholder location="classpath:properties/*.properties"/>
     <mvc:annotation-driven/>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/item/**"/>
+            <bean class="com.taotao.portal.loginInterceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="jsp/" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
 </beans>
